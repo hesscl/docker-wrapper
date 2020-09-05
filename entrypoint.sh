@@ -16,4 +16,5 @@ DOCKER_ARGS="run --rm"
 DOCKER_ARGS="$DOCKER_ARGS $LAUNCH_ENVIRONMENT $LAUNCH_VOLUMES $LAUNCH_EXTRA_ARGS $LAUNCH_IMAGE"
 
 echo "Running $LAUNCH_IMAGE: exec docker $DOCKER_ARGS"
-exec docker $DOCKER_ARGS
+exec docker run -t -p 6000:6000 -e VNC_SERVER_PASSWORD=password -e HELENA_PROGRAM_ID=5803 -e TIME_LIMIT_IN_HOURS=23 -e NUM_RUNS_ALLOWED_PER_WORKER=99  -e SCRIPT_PARAMS="url='https://newjersey.craigslist.org/search/apa?postedToday=1&bundleDuplicates=1&availabilityMode=0&sale_date=all+dates',container='container_name_worker'" --user apps --privileged schasins/helena:latest
+

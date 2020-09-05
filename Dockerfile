@@ -2,13 +2,13 @@
 FROM docker:latest
 
 # launch parameters
-ENV LAUNCH_IMAGE            hello-world
-ENV LAUNCH_PULL             false
+ENV LAUNCH_IMAGE            schasins/helena:latest
+ENV LAUNCH_PULL             true
 ENV LAUNCH_CONTAINER_NAME=
-ENV LAUNCH_PRIVILEGED       false
+ENV LAUNCH_PRIVILEGED       true
 ENV LAUNCH_INTERACTIVE      false
-ENV LAUNCH_TTY              false
-ENV LAUNCH_HOST_NETWORK     false
+ENV LAUNCH_TTY              true
+ENV LAUNCH_HOST_NETWORK     true
 ENV LAUNCH_ENVIRONMENT=
 ENV LAUNCH_VOLUMES=
 ENV LAUNCH_EXTRA_ARGS=
